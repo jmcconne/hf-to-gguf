@@ -1,0 +1,12 @@
+{
+    "download": {
+        "model_id": "<model_repo>", # HF model repo to be downloaded
+        "model_revision": "<commit_hash>" # Commit hash for HF model version to be downloaded. Can be short or long commit hash.
+    },
+    "conversion": {
+        "hf_to_gguf_version": "<commit_hash>", # Commit hash of hf-to-gguf repo to be used for conversion. Can be short or long commit hash. If left empty, latest commit will be used.
+        "model_name_prefix": "<model_name_prefix>", # Model name prefix to be used for converted model
+        "outtype": "<output_type>" # Type to convert to. It is recommended to retain the original model type and rely on quantization to reduce the model size. Run "llama.cpp/convert.py --help" for possible values.
+    },
+    "quantization": "<quant_type>" # Quantization type to be used. Run "llama.cpp/quantize --help" for possible values.
+}
